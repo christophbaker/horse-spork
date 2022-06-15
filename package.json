@@ -1,0 +1,49 @@
+{
+  "name": "template-kata-horse-nodejs",
+  "description": "This is an exercise helping you to learn Test-Driven Development. Your task is to test-drive a function that filters, sorts and paginates a bunch of data. In this case, the data concerns horses.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophbaker/template-kata-horse-nodejs.git"
+  },
+  "author": "Christoph",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christophbaker/template-kata-horse-nodejs/issues"
+  },
+  "homepage": "https://github.com/christophbaker/template-kata-horse-nodejs#readme",
+  "scripts": {
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "dependencies": {
+    "balanced-match": "^1.0.2",
+    "brace-expansion": "^1.1.11",
+    "concat-map": "^0.0.1",
+    "fs.realpath": "^1.0.0",
+    "glob": "^7.2.3",
+    "inflight": "^1.0.6",
+    "inherits": "^2.0.4",
+    "minimatch": "^3.1.2",
+    "once": "^1.4.0",
+    "path-is-absolute": "^1.0.1",
+    "wrappy": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jasmine": "^4.2.0",
+    "prettier": "^2.7.0"
+  },
+  "keywords": [
+    "Node.JS",
+    "kata",
+    "horse"
+  ]
+}
