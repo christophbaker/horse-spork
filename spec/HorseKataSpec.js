@@ -49,17 +49,24 @@ describe("Horse kata test", () => {
   //   // TODO: assert something.
   // });
 
-  it("given all null data filterSortPaginateTable returns empty table", () => {
-    const expectedTable = new PaginatedTable([], [], 0);
-
-    const table = app.filterSortPaginateTable(
-      null,
-      null,
-      null,
-      null,
-      null
-    );
-
-    expect(table).toEqual(expectedTable);
+  describe("filterSortPaginateTable", () => {
+    
+    it("given all null data returns empty table", () => {
+      const expectedTable = new PaginatedTable([], [], 0);
+  
+      const table = app.filterSortPaginateTable(
+        null,
+        null,
+        null,
+        null,
+        null
+      );
+  
+      expect(table).toEqual(expectedTable);
+    });
   });
+
+  
+
+
 });
