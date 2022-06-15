@@ -66,7 +66,13 @@ describe("Horse kata test", () => {
     });
   });
 
-  
+  it("given header data the header should be set", () => {
+    const expectedTable = new PaginatedTable(sampleHeaders, [], 0);
 
+    const table = app.filterSortPaginateTable(
+      sampleHeaders, null, null, null, null
+    );
 
+    expect(table).toEqual(expectedTable);
+  })
 });

@@ -7,5 +7,10 @@ exports.filterSortPaginateTable = function filterSortPaginateTable(
   sortMetadata,
   paginationMetadata
 ) {
-  return new PaginatedTable([], [], 0);
+
+  if (headers === null) {
+    headers = [];
+  }
+
+  return new PaginatedTable(headers, [], 0);
 };
