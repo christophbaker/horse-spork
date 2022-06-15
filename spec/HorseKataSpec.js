@@ -77,10 +77,12 @@ describe("Horse kata test", () => {
   });
 
   it("given only table data the table data should be set", () => {
-    const expectedTable = new PaginatedTable([], sampleTableData, 0);
+    const expectedTable = new PaginatedTable([], sampleTableData, 5);
 
     const table = app.filterSortPaginateTable(null, sampleTableData, null, null, null);
 
     expect(table).toEqual(expectedTable);
   });
+
+  // it("given ")
 });

@@ -16,5 +16,5 @@ exports.filterSortPaginateTable = function filterSortPaginateTable(
     tableData = [];
   }
 
-  return new PaginatedTable(headers, tableData, 0);
+  return new PaginatedTable(headers, tableData, tableData.length);
 };
