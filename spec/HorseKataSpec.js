@@ -84,5 +84,24 @@ describe("Horse kata test", () => {
     expect(table).toEqual(expectedTable);
   });
 
-  // it("given ")
+    // Step 1: Determine index of filter's header
+    //         Breed = 0
+    //         Age = 3
+    // Step 2: Iterate through the data getting value from index location
+    // Step 3: Verify that the value is equel to filter value
+    // Step 3: Only return values that match
+  it("given a table with data and a filter it should only return the filtered data", () => {
+    const filter = [
+      new FilterMetadata("Breed", "Thoroughbred"),
+    ];
+    const expectedFilteredData = [
+      ["Thoroughbred", "Bay", "1.6", "3", "true"],
+      ["Thoroughbred", "Grey", "1.55", "3", "true"],
+    ];
+    const expectedTable = new PaginatedTable(sampleHeaders, expectedFilteredData, 2);
+
+    const table = app.filterSortPaginateTable(sampleHeaders, sampleTableData, filter, null, null);
+
+    expect(table).toEqual(expectedTable);
+  });
 });
