@@ -1,3 +1,5 @@
+const PaginatedTable = require("./PaginatedTable");
+
 exports.filterSortPaginateTable = function filterSortPaginateTable(
   headers,
   tableData,
@@ -5,10 +7,5 @@ exports.filterSortPaginateTable = function filterSortPaginateTable(
   sortMetadata,
   paginationMetadata
 ) {
-  // TODO: filter horse table using filters
-
-  // TODO: sort horse table using sortMetadata
-
-  // TODO: paginate horse table using paginationMetadata
-  throw new Error("Not Implemented");
+  return new PaginatedTable([], [], 0);
 };

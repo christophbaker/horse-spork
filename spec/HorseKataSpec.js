@@ -2,6 +2,7 @@ const app = require("../app/Horse");
 const FilterMetadata = require("../app/FilterMetadata");
 const SortMetadata = require("../app/SortMetadata");
 const PaginationMetadata = require("../app/PaginationMetadata");
+const PaginatedTable = require("../app/PaginatedTable");
 
 describe("Horse kata test", () => {
   const sampleHeaders = ["Breed", "Colour", "Height", "Age", "Shoes"];
@@ -36,15 +37,29 @@ describe("Horse kata test", () => {
 
   const samplePaginationMetadata = new PaginationMetadata(1, 3);
 
-  it("does everything -- filter, sort, and paginate", () => {
+  // it("does everything -- filter, sort, and paginate", () => {
+  //   const table = app.filterSortPaginateTable(
+  //     sampleHeaders,
+  //     sampleTableData,
+  //     sampleFilters,
+  //     sampleSortMetadata,
+  //     samplePaginationMetadata
+  //   );
+
+  //   // TODO: assert something.
+  // });
+
+  it("given all null data filterSortPaginateTable returns empty table", () => {
+    const expectedTable = new PaginatedTable([], [], 0);
+
     const table = app.filterSortPaginateTable(
-      sampleHeaders,
-      sampleTableData,
-      sampleFilters,
-      sampleSortMetadata,
-      samplePaginationMetadata
+      null,
+      null,
+      null,
+      null,
+      null
     );
 
-    // TODO: assert something.
+    expect(table).toEqual(expectedTable);
   });
 });
